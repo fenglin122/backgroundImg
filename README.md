@@ -1,2 +1,2 @@
 # backgroundImg
-jQuery实现淡入淡出切换网页背景图 demo
+jQuery实现自动淡入淡出切换网页背景图 demo
