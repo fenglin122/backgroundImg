@@ -36,6 +36,13 @@
 
    <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
    <script type="text/javascript">
+       //预加载
+    var $img = new Array(3);
+    for(var i = 0; i <3; i++){
+        $img[i] = new Image();
+        $img[i].src = "./images/bgimg/"+(i+1)+".jpg";
+    }
+       
        var $box1 = $("#box1");
        var $box2 = $("#box2");
        var index = 1;
