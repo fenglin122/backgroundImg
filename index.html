@@ -15,7 +15,7 @@
            position: relative;
            background-size: cover;
            background-attachment: fixed;
-           background-image: url(./images/bgimg1.jpg);
+           background-image: url(./images/1.jpg);
        }
 
        #box1 {
@@ -38,10 +38,18 @@
    <script type="text/javascript">
        var $box1 = $("#box1");
        var $box2 = $("#box2");
-        $box1.delay(2000).animate({opacity:0},700,function() {
-            $box1.css({"background-image":"url(./images/bgimg2.jpg)",opacity:1});
-        });
-        $box2.css({"background-image":"url(./images/bgimg2.jpg)",opacity:1});
+       var index = 1;
+       setInterval(fn,3000);
+       function fn() {
+           index++;
+           if(index>3){
+               index = 1;
+           }
+            $box1.animate({opacity:0},700,function() {
+                $box1.css({"background-image":"url(./images/"+index+".jpg)",opacity:1});
+            });
+            $box2.css("background-image","url(./images/"+index+".jpg)");
+        }
    </script>
    
 </body>
